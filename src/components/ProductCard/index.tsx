@@ -9,10 +9,9 @@ export function ProductCard({ products }: ProductPropsData) {
   const {dispatch} = useRedux()
 
   const handleAddProductToCart = useCallback((product: ProductProps ) => {
-    console.log('product', product)
     dispatch(addProductToCartRequest(product));
   }, [dispatch]);
-  
+
   return (
     <Row>
       {(products || []).map((item) => {
@@ -25,6 +24,7 @@ export function ProductCard({ products }: ProductPropsData) {
               margin: '10px',
               backgroundColor: '#ffffff',
             }}
+            key={item.id}
           >
             <img
               src={item.image}

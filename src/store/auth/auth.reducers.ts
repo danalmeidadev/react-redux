@@ -47,7 +47,6 @@ const Auth = (state: State = INIT_STATE, action: AuthActionType): any => {
         loading: true,
       };
     case AuthActionTypes.AUTH_SUCCESS:
-      console.log('ACTION_PAYLOAD', action.payload)
       return {
         ...state,
         user: action.payload.user,

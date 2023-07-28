@@ -1,6 +1,5 @@
-import React, { FC, Fragment, useState } from 'react';
-import { Button, Card, Col, InputGroup, Row, Form, Alert, Nav, Tab } from 'react-bootstrap';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Button, Card, Col, Row, Form, Alert } from 'react-bootstrap';
 import { Formik } from 'formik';
 import { UserData } from './types';
 import { schemaResolver } from './validation';
@@ -10,10 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function Login() {
   const dispatch = useDispatch();
-  const dadosPersistidos = useSelector((state) => state);
 
-  
-  const { user, userLoggedIn, loading, error } = useSelector((state: any) => ({
+  const {  error } = useSelector((state: any) => ({
     user: state,
     loading: state.Auth.loading,
     error: state.Auth.error,
@@ -24,11 +21,8 @@ export default function Login() {
     dispatch(loginUser(formData["email"], formData["password"]));
   };
 
-  console.log('user_login', dadosPersistidos);
-
   return (
-    <Fragment>
-
+    <>
       <div className="page">
         <div className="page-content">
           <div className="container">
@@ -72,7 +66,7 @@ export default function Login() {
                                     <Form.Control
                                       type="text"
                                       className={errors.email && "form-control is-invalid"}
-                                      placeholder="Informe o nome do visitante"
+                                      placeholder="Informe seu email"
                                       name="email"
                                       value={values.email}
                                       onChange={handleChange('email')}
@@ -88,7 +82,7 @@ export default function Login() {
                                     <Form.Control
                                       type="text"
                                       className={errors.password && "form-control is-invalid"}
-                                      placeholder="Informe o nome do visitante"
+                                      placeholder="Informe sua senha"
                                       name="email"
                                       value={values.password}
                                       onChange={handleChange('password')}
@@ -127,7 +121,7 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
 
   )
 }

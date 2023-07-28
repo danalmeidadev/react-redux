@@ -32,7 +32,6 @@ const Product = (state: State = INIT_STATE, action: ProductActionType): any => {
         loading: true,
       };
     case ProductActionTypes.PRODUCT_SUCCCESS:
-      console.log('ACTION_PAYLOAD_PRODUCT', action.payload)
       return {
         ...state,
         product: action.payload.product,

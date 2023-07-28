@@ -37,7 +37,7 @@ const homeAppRoutes: RoutesProps = {
 const financeAppRoutes: RoutesProps = {
   path: "/financeiro",
   route: PrivateRoute,
-  role: "editor",
+  role: "admin",
   icon: "ri-message-2-line",
   element: <Finance />,
 };

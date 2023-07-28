@@ -11,7 +11,6 @@ function* product(): SagaIterator {
     yield put(productSuccess(data));
   
   } catch (error: any) {
-    console.log("error", error);
     yield put(productFailure());
   }
 }

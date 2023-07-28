@@ -44,7 +44,7 @@ axios.interceptors.response.use(
   }
 );
 
-const AUTH_SESSION_KEY = "@solarview";
+const AUTH_SESSION_KEY = "@key123";
 
 const setAuthorization = (token: string | null) => {
   if (token) axios.defaults.headers.common["Authorization"] = "Bearer " + token;

@@ -32,7 +32,6 @@ function* login({
   try {
     const response = yield call(loginApi, { email, password });
     const user = response.data;
-    console.log('user_saga', user)
     yield put(loginSuccess(user));
     api.setLoggedInUser(user);
     setAuthorization(user["token"]);

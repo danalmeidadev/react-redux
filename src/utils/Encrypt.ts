@@ -4,7 +4,7 @@ interface TypeData {
   [chave: string]: any
 }
 
-const keyEncript = "solar123";
+const keyEncript = String(process.env.KEY_LOCAL);
 
 const encryptdata = (data: TypeData): string => {
   const dataString = JSON.stringify(data);
@@ -34,7 +34,6 @@ export const saveEncryptedDataLocalStorage = (key: string, dados: TypeData): voi
   }
 };
 
-// Função para obter os dados criptografados do LocalStorage e descriptografá-los
 export const getEncryptedDataLocalStorage = (key: string): TypeData | null => {
   try {
     const dadosCriptografados = localStorage.getItem(key);
@@ -60,15 +59,11 @@ export const removeDataFromLocalStorage = (key: string): void => {
 
 // Exemplo de uso:
 /* const exemploPersistenciaComCriptografia = () => {
-  const dadosExemplo: MeuTipoDeDado = {
+  const example: MyData = {
     campo1: "Valor 1",
     campo2: 42,
   };
 
-  // Salvando os dados criptografados no LocalStorage
-  salvarDadosCriptografadosLocalStorage(dadosExemplo);
-
-  // Obtendo os dados criptografados do LocalStorage e descriptografando-os
   const dadosObtidos = obterDadosCriptografadosLocalStorage();
   console.log("Dados obtidos:", dadosObtidos);
 }; */

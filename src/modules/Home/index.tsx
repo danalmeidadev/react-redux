@@ -11,9 +11,6 @@ export default function Home(){
     products: state.Product.product,
   }));
 
-  const data = {
-    name: 'Dan'
-  }
   const getProducts = useCallback(() => {
     dispatch(productRequest());
   }, [])
@@ -21,9 +18,6 @@ export default function Home(){
   useEffect(() => {
     getProducts();
   }, [])
-  /* salvarDadosCriptografadosLocalStorage(data) */
-
-  console.log("USER", products)
 
 
   return(
