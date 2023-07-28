@@ -1,0 +1,10 @@
+// react-image-lightbox.scss
+
+.ReactModalPortal{
+    .ReactModal__Overlay{
+
+        &--after-open {
+            z-index: 1002 !important;
+        }
+    }
+}

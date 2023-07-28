@@ -1,0 +1,30 @@
+// 
+// pagination.scss
+//
+
+
+// Pagination rounded (Custom)
+.pagination-rounded {
+
+    .page-item{
+        .page-link {
+            border-radius: 30px !important;
+            border: none;
+            margin: 0 3px;
+        }
+
+        &:first-child{
+            .page-link{
+                margin-left: 0;
+            }
+        }
+
+        &:last-child{
+            .page-link{
+                margin-right: 0;
+            }
+        }
+    }
+
+    
+}

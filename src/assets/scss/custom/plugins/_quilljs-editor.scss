@@ -1,0 +1,79 @@
+//
+// quilljs-editor.scss
+//
+ 
+// react-draft-wysiwyg
+.rdw-editor-wrapper {
+        border-color: $input-border-color !important;
+
+    .rdw-editor-toolbar {
+        background: transparent !important;
+        border-bottom: 1px solid $input-border-color !important; 
+        border: none;
+        
+        .rdw-option-wrapper, .rdw-block-dropdown, .rdw-fontsize-dropdown, .rdw-fontfamily-dropdown, .rdw-dropdown-optionwrapper{
+            background: $input-bg !important;
+            border-color: transparent !important;
+            &:hover, &.rdw-option-active {
+                box-shadow: none !important;
+            }
+
+            img{
+                fill: $dark !important;
+            }
+
+            .rdw-dropdownoption-highlighted, .rdw-dropdownoption-active{
+                background: $dropdown-link-active-bg !important;
+            }
+        }
+
+         .rdw-option-wrapper {
+             background: transparent !important;
+         }
+    }
+
+    .rdw-editor-main{
+        border-color: $input-border-color !important;
+    }
+}
+
+// simplemde editor
+
+.EasyMDEContainer{
+    .CodeMirror {
+        background: $input-bg !important;
+        border-color: $input-border-color !important;
+    }
+    .editor-toolbar{
+        border-color: $input-border-color !important;
+
+        i.separator{    
+            border-color: $input-border-color !important;
+        }
+
+        button {
+            color: $dark !important;
+            &:hover {
+                background: tint-color($gray-300, 2%) !important;
+                border-color: transparent !important;
+            }
+        }
+    }
+
+    .CodeMirror-lines {
+        .CodeMirror-cursors {
+            .CodeMirror-cursor{
+                border-color: $dark;
+            }
+        }
+        .CodeMirror-code{
+            .CodeMirror-line {
+                color: $dark;
+                .cm-null {
+                    background: transparent !important;
+                    color:  $input-color !important;
+                }
+            }
+        }
+    }
+}

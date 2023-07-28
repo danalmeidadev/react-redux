@@ -1,0 +1,33 @@
+//
+// bootstrap-touchspin.scss
+//
+
+.bootstrap-touchspin{
+
+    .btn {
+        .input-group-text {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            color: inherit;
+        }
+    }
+
+    &.input-group{
+      &>.input-group-prepend{
+        &>.btn, &>.input-group-text{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        }
+      }
+    }
+  
+    &.input-group{
+      &>.input-group-append{
+        &>.btn, &>.input-group-text{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+} 
